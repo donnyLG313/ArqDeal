@@ -1,0 +1,266 @@
+/**
+ * Form options and constants for the onboarding portal
+ */
+
+export const COUNTRIES = [
+  { value: 'US', label: 'United States' },
+  { value: 'CA', label: 'Canada' },
+  { value: 'GB', label: 'United Kingdom' },
+  { value: 'DE', label: 'Germany' },
+  { value: 'FR', label: 'France' },
+  { value: 'CH', label: 'Switzerland' },
+  { value: 'SG', label: 'Singapore' },
+  { value: 'HK', label: 'Hong Kong' },
+  { value: 'JP', label: 'Japan' },
+  { value: 'AU', label: 'Australia' },
+  { value: 'NZ', label: 'New Zealand' },
+  { value: 'AE', label: 'United Arab Emirates' },
+  { value: 'NL', label: 'Netherlands' },
+  { value: 'IE', label: 'Ireland' },
+  { value: 'LU', label: 'Luxembourg' },
+  { value: 'AT', label: 'Austria' },
+  { value: 'BE', label: 'Belgium' },
+  { value: 'DK', label: 'Denmark' },
+  { value: 'SE', label: 'Sweden' },
+  { value: 'NO', label: 'Norway' },
+  { value: 'FI', label: 'Finland' },
+  { value: 'ES', label: 'Spain' },
+  { value: 'IT', label: 'Italy' },
+  { value: 'PT', label: 'Portugal' },
+  { value: 'BR', label: 'Brazil' },
+  { value: 'MX', label: 'Mexico' },
+  { value: 'KR', label: 'South Korea' },
+  { value: 'TW', label: 'Taiwan' },
+  { value: 'IN', label: 'India' },
+  { value: 'IL', label: 'Israel' },
+];
+
+export const HIGH_RISK_COUNTRIES = [
+  { value: 'CU', label: 'Cuba' },
+  { value: 'IR', label: 'Iran' },
+  { value: 'KP', label: 'North Korea' },
+  { value: 'SY', label: 'Syria' },
+  { value: 'RU', label: 'Russia' },
+  { value: 'BY', label: 'Belarus' },
+  { value: 'VE', label: 'Venezuela' },
+  { value: 'MM', label: 'Myanmar' },
+];
+
+export const ALL_COUNTRIES = [...COUNTRIES, ...HIGH_RISK_COUNTRIES].sort((a, b) =>
+  a.label.localeCompare(b.label)
+);
+
+export const US_STATES = [
+  { value: 'AL', label: 'Alabama' },
+  { value: 'AK', label: 'Alaska' },
+  { value: 'AZ', label: 'Arizona' },
+  { value: 'AR', label: 'Arkansas' },
+  { value: 'CA', label: 'California' },
+  { value: 'CO', label: 'Colorado' },
+  { value: 'CT', label: 'Connecticut' },
+  { value: 'DE', label: 'Delaware' },
+  { value: 'FL', label: 'Florida' },
+  { value: 'GA', label: 'Georgia' },
+  { value: 'HI', label: 'Hawaii' },
+  { value: 'ID', label: 'Idaho' },
+  { value: 'IL', label: 'Illinois' },
+  { value: 'IN', label: 'Indiana' },
+  { value: 'IA', label: 'Iowa' },
+  { value: 'KS', label: 'Kansas' },
+  { value: 'KY', label: 'Kentucky' },
+  { value: 'LA', label: 'Louisiana' },
+  { value: 'ME', label: 'Maine' },
+  { value: 'MD', label: 'Maryland' },
+  { value: 'MA', label: 'Massachusetts' },
+  { value: 'MI', label: 'Michigan' },
+  { value: 'MN', label: 'Minnesota' },
+  { value: 'MS', label: 'Mississippi' },
+  { value: 'MO', label: 'Missouri' },
+  { value: 'MT', label: 'Montana' },
+  { value: 'NE', label: 'Nebraska' },
+  { value: 'NV', label: 'Nevada' },
+  { value: 'NH', label: 'New Hampshire' },
+  { value: 'NJ', label: 'New Jersey' },
+  { value: 'NM', label: 'New Mexico' },
+  { value: 'NY', label: 'New York' },
+  { value: 'NC', label: 'North Carolina' },
+  { value: 'ND', label: 'North Dakota' },
+  { value: 'OH', label: 'Ohio' },
+  { value: 'OK', label: 'Oklahoma' },
+  { value: 'OR', label: 'Oregon' },
+  { value: 'PA', label: 'Pennsylvania' },
+  { value: 'RI', label: 'Rhode Island' },
+  { value: 'SC', label: 'South Carolina' },
+  { value: 'SD', label: 'South Dakota' },
+  { value: 'TN', label: 'Tennessee' },
+  { value: 'TX', label: 'Texas' },
+  { value: 'UT', label: 'Utah' },
+  { value: 'VT', label: 'Vermont' },
+  { value: 'VA', label: 'Virginia' },
+  { value: 'WA', label: 'Washington' },
+  { value: 'WV', label: 'West Virginia' },
+  { value: 'WI', label: 'Wisconsin' },
+  { value: 'WY', label: 'Wyoming' },
+  { value: 'DC', label: 'District of Columbia' },
+];
+
+export const PHONE_COUNTRY_CODES = [
+  { value: '+1', label: '+1 (US/CA)' },
+  { value: '+44', label: '+44 (UK)' },
+  { value: '+49', label: '+49 (DE)' },
+  { value: '+33', label: '+33 (FR)' },
+  { value: '+41', label: '+41 (CH)' },
+  { value: '+65', label: '+65 (SG)' },
+  { value: '+852', label: '+852 (HK)' },
+  { value: '+81', label: '+81 (JP)' },
+  { value: '+61', label: '+61 (AU)' },
+  { value: '+971', label: '+971 (UAE)' },
+  { value: '+31', label: '+31 (NL)' },
+  { value: '+353', label: '+353 (IE)' },
+  { value: '+352', label: '+352 (LU)' },
+  { value: '+82', label: '+82 (KR)' },
+  { value: '+886', label: '+886 (TW)' },
+  { value: '+91', label: '+91 (IN)' },
+  { value: '+972', label: '+972 (IL)' },
+  { value: '+55', label: '+55 (BR)' },
+  { value: '+52', label: '+52 (MX)' },
+];
+
+export const INDUSTRIES = [
+  { value: 'blockchain_crypto', label: 'Blockchain / Cryptocurrency' },
+  { value: 'investment_holding', label: 'Investment Holding Company' },
+  { value: 'venture_capital', label: 'Venture Capital / Private Equity' },
+  { value: 'family_office', label: 'Family Office' },
+  { value: 'hedge_fund', label: 'Hedge Fund' },
+  { value: 'asset_management', label: 'Asset Management' },
+  { value: 'fintech', label: 'Financial Technology (FinTech)' },
+  { value: 'software_tech', label: 'Software / Technology' },
+  { value: 'trading', label: 'Trading / Market Making' },
+  { value: 'real_estate', label: 'Real Estate Investment' },
+  { value: 'consulting', label: 'Consulting / Advisory' },
+  { value: 'manufacturing', label: 'Manufacturing' },
+  { value: 'retail_ecommerce', label: 'Retail / E-commerce' },
+  { value: 'healthcare', label: 'Healthcare / Biotech' },
+  { value: 'energy', label: 'Energy / Utilities' },
+  { value: 'media_entertainment', label: 'Media / Entertainment' },
+  { value: 'other', label: 'Other' },
+];
+
+export const INDIVIDUAL_FUND_SOURCES = [
+  { value: 'savings', label: 'Personal Savings' },
+  { value: 'employment_income', label: 'Employment Income / Bonus' },
+  { value: 'asset_sales', label: 'Sale of Assets (Property, Business, etc.)' },
+  { value: 'crypto_gains', label: 'Cryptocurrency / Digital Asset Gains' },
+  { value: 'investments', label: 'Investment Returns / Dividends' },
+  { value: 'inheritance', label: 'Inheritance / Gift' },
+  { value: 'retirement', label: 'Retirement / Pension Funds' },
+  { value: 'other', label: 'Other' },
+];
+
+export const ENTITY_FUND_SOURCES = [
+  { value: 'investor_capital', label: 'Investor Capital / Fundraising' },
+  { value: 'business_revenue', label: 'Business Revenue / Operations' },
+  { value: 'self_funded', label: 'Self-Funded / Founder Capital' },
+  { value: 'asset_sales', label: 'Sale of Assets' },
+  { value: 'loans', label: 'Loans / Credit Facilities' },
+  { value: 'crypto_holdings', label: 'Existing Crypto Holdings' },
+  { value: 'treasury', label: 'Treasury / Reserve Funds' },
+  { value: 'other', label: 'Other' },
+];
+
+export const TRADE_SIZE_RANGES = [
+  { value: '100k-500k', label: '$100,000 - $500,000' },
+  { value: '500k-1m', label: '$500,000 - $1,000,000' },
+  { value: '1m-5m', label: '$1,000,000 - $5,000,000' },
+  { value: '5m-10m', label: '$5,000,000 - $10,000,000' },
+  { value: '10m-50m', label: '$10,000,000 - $50,000,000' },
+  { value: '50m+', label: '$50,000,000+' },
+  { value: 'not_sure', label: 'Not sure yet' },
+];
+
+export const MONTHLY_VOLUME_RANGES = [
+  { value: '0-10k', label: '$0 - $10,000' },
+  { value: '10k-50k', label: '$10,000 - $50,000' },
+  { value: '50k-100k', label: '$50,000 - $100,000' },
+  { value: '100k-500k', label: '$100,000 - $500,000' },
+  { value: '500k-1m', label: '$500,000 - $1,000,000' },
+  { value: '1m-5m', label: '$1,000,000 - $5,000,000' },
+  { value: '5m-10m', label: '$5,000,000 - $10,000,000' },
+  { value: '10m+', label: '$10,000,000+' },
+];
+
+export const RESTRICTED_TYPES = [
+  {
+    id: 'sec_registered',
+    label: 'SEC-registered investment advisor or broker-dealer',
+    description: 'Entities registered with the U.S. Securities and Exchange Commission',
+  },
+  {
+    id: 'public_company',
+    label: 'Publicly traded company',
+    description: 'Companies listed on public stock exchanges',
+  },
+  {
+    id: 'gambling',
+    label: 'Gambling or gaming business',
+    description: 'Casinos, sports betting, online gambling, etc.',
+  },
+  {
+    id: 'adult',
+    label: 'Adult entertainment business',
+    description: 'Pornography, adult content, escort services, etc.',
+  },
+  {
+    id: 'firearms',
+    label: 'Firearms or weapons dealer',
+    description: 'Manufacturing, sales, or distribution of weapons',
+  },
+  {
+    id: 'cannabis',
+    label: 'Cannabis / THC / Controlled substances business',
+    description: 'Marijuana dispensaries, CBD with THC, illegal drugs',
+  },
+  {
+    id: 'government',
+    label: 'Government entity or agency',
+    description: 'Federal, state, local government bodies',
+  },
+  {
+    id: 'money_service',
+    label: 'Unlicensed money service business',
+    description: 'Money transmission without required licenses',
+  },
+  {
+    id: 'shell_company',
+    label: 'Shell company with no legitimate business purpose',
+    description: 'Entities without genuine business operations',
+  },
+  {
+    id: 'sanctioned',
+    label: 'Entity or individual on OFAC sanctions list',
+    description: 'Sanctioned persons, entities, or countries',
+  },
+  {
+    id: 'pep',
+    label: 'Politically Exposed Person (PEP)',
+    description: 'Senior government officials, their family, or close associates',
+  },
+  {
+    id: 'pyramid_scheme',
+    label: 'Multi-level marketing / Pyramid scheme',
+    description: 'MLM businesses or pyramid schemes',
+  },
+];
+
+export const SUFFIX_OPTIONS = [
+  { value: '', label: 'None' },
+  { value: 'Jr.', label: 'Jr.' },
+  { value: 'Sr.', label: 'Sr.' },
+  { value: 'II', label: 'II' },
+  { value: 'III', label: 'III' },
+  { value: 'IV', label: 'IV' },
+  { value: 'V', label: 'V' },
+  { value: 'Esq.', label: 'Esq.' },
+  { value: 'MD', label: 'MD' },
+  { value: 'PhD', label: 'PhD' },
+];
